@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 18:10:09 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/21 18:49:34 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/21 19:42:12 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,15 +71,18 @@ int	draw_loop(t_game *g)
 
 	x = 0;
 	move_player(g);
+	d.cam_x = -1.0;
+	d.cam_step = 2.0 / WIDTH;
 	while (x < WIDTH)
 	{
-		d.cam_x = 2.0 * x / WIDTH - 1.0;
+		
 		init_dda(&d, &g->player);
 		calc_step(&d, g->player.pos_x, g->player.pos_y);
 		exec_dda(&d, g->map);
 		set_texture(&d, &g->player);
 		calc_line(&d);
 		draw_line(g, &d, x);
+		d.cam_x += d.cam_step;
 		x++;
 	}
 	if (g->input.show_map)

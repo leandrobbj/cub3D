@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:53:13 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/21 18:56:52 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/21 19:44:49 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@
 # define WIDTH 1200
 # define HEIGHT 900
 # define MARGIN 0.2 	// 0.9 MAX
-# define ROTATE 0.03	// 0.9 MAX
-# define SPEED 0.05 	// 0.9 MAX
+# define ROTATE 0.005	// 0.03 - 0.9 MAX
+# define SPEED 0.01 	// 0.05 - 0.9 MAX
 # define MAP 20			// SIZE MAP PERCENTAGE
 # define FOV 66.8		// 4:3 = 66.8 / 16:9 82,6
 

@@ -6,14 +6,14 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/29 14:00:29 by lbraga            #+#    #+#              #
-#    Updated: 2026/10/21 19:02:43 by lbraga           ###   ########.fr        #
+#    Updated: 2026/10/21 20:04:17 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	cub3d
 HEADER	=	cub3d.h
 CC		=	cc
-CFLAGS	=	-Wall -Wextra -Werror -I.
+CFLAGS	=	-Wall -Wextra -Werror -O2 -I. #testar -02
 LDFLAGS	=
 RM		=	rm -rf
 OBJDIR	=	obj
@@ -61,6 +61,7 @@ fclean: clean
 
 re: fclean all
 
+#includo para get_next_line em compiladores mais novos
 new: fclean
 	@$(MAKE) LDFLAGS="-no-pie"
 
