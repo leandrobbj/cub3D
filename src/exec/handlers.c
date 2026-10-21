@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 18:10:09 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/21 19:42:12 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/21 20:06:42 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ int	draw_loop(t_game *g)
 	d.cam_step = 2.0 / WIDTH;
 	while (x < WIDTH)
 	{
-		
 		init_dda(&d, &g->player);
 		calc_step(&d, g->player.pos_x, g->player.pos_y);
 		exec_dda(&d, g->map);
