@@ -6,14 +6,14 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/29 14:00:29 by lbraga            #+#    #+#              #
-#    Updated: 2026/10/22 13:19:10 by lbraga           ###   ########.fr        #
+#    Updated: 2026/10/22 14:49:32 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	cub3d
 HEADER	=	cub3d.h
 CC		=	cc
-CFLAGS	=	-Wall -Wextra -Werror -O2 -I.
+CFLAGS	=	-Wall -Wextra -Werror -I.
 LDFLAGS	=
 RM		=	rm -rf
 OBJDIR	=	obj

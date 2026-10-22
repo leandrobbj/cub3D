@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:12:58 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 17:52:03 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 14:53:04 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ t_error	check_map(char **lines, int start, t_setup *cfg)
 	height = 0;
 	while (lines[start + height])
 		height++;
-/* 	if (!map_has_content(lines, start, height))
-		return (ERR_MAP_SPACES); */
 	if (!check_map_chars(lines, start, height))
 		return (ERR_MAP_CHAR);
 	players = find_player(lines, start, height, cfg);

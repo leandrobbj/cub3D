@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:45:38 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 17:39:26 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 14:53:21 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ static void	put_map_error(t_error err)
 {
 	if (err == ERR_NO_MAP)
 		ft_putstr_fd("No map found in file", 2);
-/* 	else if (err == ERR_MAP_SPACES)
-		ft_putstr_fd("Map only has spaces (no map)", 2); */
 	else if (err == ERR_MAP_CHAR)
 		ft_putstr_fd("Invalid character in the map", 2);
 	else if (err == ERR_MULTIPLE_OR_NO_PLAYER)

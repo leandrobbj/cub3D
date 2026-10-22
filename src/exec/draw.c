@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:50:22 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/22 13:35:36 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 14:52:31 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,4 @@ void	draw_line(t_game *g, t_dda *d, int x)
 		put_horizontal_line(g, WALL1, &l);
 	else
 		put_horizontal_line(g, WALL2, &l);
-
 }

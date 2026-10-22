@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:17:09 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 17:48:24 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 14:51:56 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static t_error	check_tex_file(char *path)
 {
 	int	fd;
 
-	if (check_extension(path, ".xpm")) //REMOVI PNG
+	if (check_extension(path, ".xpm"))
 		return (ERR_TEXTURE);
 	fd = open(path, O_RDONLY);
 	if (fd < 0)
