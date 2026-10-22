@@ -1,7 +1,7 @@
-NO ./maps/textures/Og1.xpm
-SO ./maps/textures/Og2.xpm
-WE ./maps/textures/Og3.xpm
-EA ./maps/textures/Og4.xpm
+NO ./maps/textures/b1.xpm
+SO ./maps/textures/b2.xpm
+WE ./maps/textures/b3.xpm
+EA ./maps/textures/b4.xpm
 
 F 100,100,100
 C 30,30,30

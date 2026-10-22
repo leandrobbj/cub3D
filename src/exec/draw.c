@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:50:22 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/21 17:44:24 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 13:35:36 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,17 +83,18 @@ void	draw_line(t_game *g, t_dda *d, int x)
 
 	l.x = x;
 	l.y = 0;
-	l.end = d->start - 1;
+	l.end = d->start;
 	put_horizontal_line(g, g->setup.color_c, &l);
-	l.y = d->start ;
+	l.y = d->end;
+	l.end = HEIGHT - 1;
+	put_horizontal_line(g, g->setup.color_f, &l);
+	l.y = d->start;
 	l.end = d->end;
 	if (g->input.show_flat == false)
 		draw_texture(g, d, &g->texture[d->index], x);
 	else if (d->side_hit == VERTI)
-		put_horizontal_line(g, WALL, &l);
+		put_horizontal_line(g, WALL1, &l);
 	else
-		put_horizontal_line(g, WAL2, &l);
-	l.y = d->end + 1;
-	l.end = HEIGHT - 1;
-	put_horizontal_line(g, g->setup.color_f, &l);
+		put_horizontal_line(g, WALL2, &l);
+
 }

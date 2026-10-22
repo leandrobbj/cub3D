@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:53:13 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/21 19:44:49 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 13:18:14 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@
 # define M_PI 3.14159265358979323846	// PI = 180
 # define WIDTH 1200
 # define HEIGHT 900
-# define MARGIN 0.2 	// 0.9 MAX
-# define ROTATE 0.005	// 0.03 - 0.9 MAX
-# define SPEED 0.01 	// 0.05 - 0.9 MAX
-# define MAP 20			// SIZE MAP PERCENTAGE
 # define FOV 66.8		// 4:3 = 66.8 / 16:9 82,6
+# define ROTATE 0.005	// 0.03 - 0.9 MAX
+# define SPEED 0.01		// 0.05 - 0.9 MAX
+# define MAP 20			// SIZE MAP PERCENTAGE
+# define MARGIN 0.2 	// 0.5 MAX
 
 enum e_colors
 {
@@ -40,13 +40,11 @@ enum e_colors
 	CIA = 0x00FFFF,
 	MAG = 0xFF00FF,
 	YEL = 0xFFFF00,
-	TILE = MAG,
+	WALL1 = BLU,
+	WALL2 = MAG,
 	TILE1 = RED,
-	RAY = YEL,
-	WALL = BLU,
-	WAL2 = MAG,
-	C_CEIL = CIA,
-	C_FLOR = GRE
+	TILE2 = MAG,
+	RAY = GRE
 };
 
 enum e_keys	// xev

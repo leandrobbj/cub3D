@@ -6,14 +6,14 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/29 14:00:29 by lbraga            #+#    #+#              #
-#    Updated: 2026/10/21 20:04:17 by lbraga           ###   ########.fr        #
+#    Updated: 2026/10/22 13:19:10 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	cub3d
 HEADER	=	cub3d.h
 CC		=	cc
-CFLAGS	=	-Wall -Wextra -Werror -O2 -I. #testar -02
+CFLAGS	=	-Wall -Wextra -Werror -O2 -I.
 LDFLAGS	=
 RM		=	rm -rf
 OBJDIR	=	obj
@@ -29,11 +29,11 @@ SRC		=	src/main.c \
 			src/map/map_closed.c src/map/map_grid.c src/map/map_parsing.c src/map/map.c \
 			src/parsing/error.c src/parsing/file.c src/parsing/parsing.c src/parsing/utils.c \
 			src/exec/init.c src/exec/handlers.c src/exec/move.c src/exec/dda.c \
-			src/exec/draw.c src/exec/map.c
+			src/exec/draw.c src/exec/minimap.c
 
 all: $(NAME)
 $(NAME): $(OBJDIR) $(OBJ) $(LIBFT) $(MLX)
-	@$(CC) $(CFLAGS) $(LDFLAGS) $(OBJ) $(LIBFT) $(MLX_LNK) -o $(NAME)
+	@$(CC) $(CFLAGS) $(LDFLAGS) $(OBJ) $(LIBFT) $(MLX_LNK) -o $(NAME) 
 	@echo "* $(NAME) compiled"
 
 $(OBJDIR):
@@ -48,7 +48,7 @@ $(LIBFT): $(LIBFT_D)
 	@$(MAKE) -C $(LIBFT_D) --no-print-directory
 
 $(MLX):
-	@$(MAKE) -s -C $(MLX_D)
+	@$(MAKE) -s -C $(MLX_D) --no-print-directory
 
 clean:
 	@$(RM) $(OBJDIR)
@@ -61,8 +61,7 @@ fclean: clean
 
 re: fclean all
 
-#includo para get_next_line em compiladores mais novos
 new: fclean
-	@$(MAKE) LDFLAGS="-no-pie"
+	@$(MAKE) LDFLAGS="-no-pie" --no-print-directory
 
 .PHONY: all clean fclean re new

@@ -1,7 +1,7 @@
-NO ./maps/textures/Directions_North.xpm
-SO ./maps/textures/Directions_South.xpm
-WE ./maps/textures/Directions_West.xpm
-EA ./maps/textures/Directions_East.xpm
+NO ./maps/textures/c1.xpm
+SO ./maps/textures/c2.xpm
+WE ./maps/textures/c3.xpm
+EA ./maps/textures/c4.xpm
 
 F 140,140,140
 C 255,255,255
