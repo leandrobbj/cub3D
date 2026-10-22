@@ -6,12 +6,12 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:53:13 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/22 15:30:01 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 15:41:19 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CUBE3D_H
-# define CUBE3D_H
+#ifndef CUB3D_H
+# define CUB3D_H
 
 # include "minilibx-linux/mlx.h"
 # include "src/libft/libft.h"

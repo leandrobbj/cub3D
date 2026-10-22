@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:17:12 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/22 15:02:49 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 15:42:02 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int	elements_complete(t_setup *cfg)
 static int	starts_element(char *line, t_setup *cfg)
 {
 	int	i;
- 
+
 	i = 0;
 	while (line[i] == ' ')
 		i++;
