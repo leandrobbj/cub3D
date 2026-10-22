@@ -1,7 +1,7 @@
-NO ./maps/textures/teste1.xpm
-SO ./maps/textures/teste2.xpm
-WE ./maps/textures/teste3.xpm
-EA ./maps/textures/teste4.xpm
+NO ./maps/textures/a1.xpm
+SO ./maps/textures/a2.xpm
+WE ./maps/textures/a3.xpm
+EA ./maps/textures/a4.xpm
 F 123,10,1
 C 225,30,132
       1111111111111111111111111

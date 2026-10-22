@@ -1,0 +1,11 @@
+
+NO ./maps/textures/a1.xpm
+SO ./maps/textures/a2.xpm
+WE ./maps/textures/a3.xpm
+EA ./maps/textures/a4.xpm
+F 123,10,1
+C 225,30,132
+
+      11111111111111111111
+     111110000000111111
+111111111111111111111111111

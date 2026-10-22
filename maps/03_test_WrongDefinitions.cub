@@ -1,7 +1,7 @@
-ON ./maps/textures/walls/n_test.xpm
-OS ./maps/textures/walls/s_test.xpm
-EW ./maps/textures/walls/w_test.xpm
-AE ./maps/textures/walls/e_test.xpm
+NO ./maps/textures/a1.xpm
+SO ./maps/textures/a2.xpm
+WE ./maps/textures/a3.xpm
+EA ./maps/textures/a4.xpm
 1F 123,10,1
 2C 225,30,132
       1111111111111111111111111

@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:17:12 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 18:24:03 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/22 15:02:49 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,18 @@ static int	elements_complete(t_setup *cfg)
 {
 	return (cfg->tex_n && cfg->tex_s && cfg->tex_e && cfg->tex_w
 		&& cfg->color_c != -1 && cfg->color_f != -1);
+}
+
+static int	starts_element(char *line, t_setup *cfg)
+{
+	int	i;
+ 
+	i = 0;
+	while (line[i] == ' ')
+		i++;
+	if (get_tex_slot(cfg, line + i))
+		return (1);
+	return ((line[i] == 'F' || line[i] == 'C') && line[i + 1] == ' ');
 }
 
 static t_error	parse_element_line(char *line, t_setup *cfg)
@@ -66,6 +78,8 @@ t_error	parse_elements(char **lines, int *start, t_setup *cfg)
 		return (ERR_MISSING_ELEMENT);
 	while (lines[i] && is_empty_line(lines[i]))
 		i++;
+	if (lines[i] && starts_element(lines[i], cfg))
+		return (ERR_DUP_ELEMENT);
 	*start = i;
 	return (OK);
 }
