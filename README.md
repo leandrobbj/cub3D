@@ -65,11 +65,11 @@ typedef struct s_game
 	void		*win;		// Window pointer
 	void		*img;		// Image buffer pointer
 	char		*data;		// Pixel data pointer
-	int			bpp;		// Bits per pixel
-	int			size_line;	// Image line size
-	int			endian;		// Endianness format
+	int		bpp;		// Bits per pixel
+	int		size_line;	// Image line size
+	int		endian;		// Endianness format
 	char		**map;		// 2D grid map 
-	int			tile;		// Map tile size
+	int		tile;		// Map tile size
 	t_setup		setup;		// Parsed configuration
 	t_texture	texture[4];	// Loaded textures [NO, SO, WE, EA]
 	t_input		input;		// Keyboard input states
@@ -83,11 +83,11 @@ Holds raw configuration values extracted from the `.cub` scene file prior to gra
 typedef struct s_setup
 {
 	char	**map;		// Parsed 2D grid map 
-	int		color_c;	// RGB ceiling color
-	int		color_f;	// RGB floor color
+	int	color_c;	// RGB ceiling color
+	int	color_f;	// RGB floor color
 	char	dir;		// Direction 'N', 'S', 'E', 'W'
-	int		pos_x;		// Player position X
-	int		pos_y;		// Player position X
+	int	pos_x;		// Player position X
+	int	pos_y;		// Player position X
 	char	*tex_n;		// Path North texture
 	char	*tex_s;		// Path South texture
 	char	*tex_e;		// Path East texture
@@ -118,24 +118,24 @@ typedef struct s_dda
 {
 	double	cam_x;		// X camera (-1 to 1)
 	double	cam_step;	// Camera step
-	int		map_x;		// Map position X
-	int		map_y;		// Map position Y
+	int	map_x;		// Map position X
+	int	map_y;		// Map position Y
 	double	dir_x;		// Ray direction X
 	double	dir_y;		// Ray direction Y
 	double	delta_x;	// Ray distance X lines
 	double	delta_y;	// Ray distance Y lines
-	int		step_x;		// Step direction X
-	int		step_y;		// Step direction Y
+	int	step_x;		// Step direction X
+	int	step_y;		// Step direction Y
 	double	dist_x;		// Distance to next X line
 	double	dist_y;		// Distance to next Y line
-	int		side_hit;	// Axis hit indicator
+	int	side_hit;	// Axis hit indicator
 	double	perp_dist;	// Perpendicular distance
 	double	offset_x;	// Wall hit X ratio 
-	int		index;		// Texture indication
-	int		x;			// Screen X
+	int	index;		// Texture indication
+	int	x;			// Screen X
 	double	height;		// Screen pixel height
-	int		start;		// Screen start pixel Y
-	int		end;		// Screen end pixel Y
+	int	start;		// Screen start pixel Y
+	int	end;		// Screen end pixel Y
 }   t_dda;
 ```
 
@@ -158,6 +158,11 @@ To build the program, you need `cc`, `make`, `X11`  and standard thread librarie
 1. Clone the repository:
 	```bash
 	git clone https://github.com/leandrobbj/cub3D.git && cd cub3D
+	```
+
+2. Clone minilibx:
+	```bash
+	git clone https://github.com/42paris/minilibx-linux.git
 	```
 
 2. Build the program:
