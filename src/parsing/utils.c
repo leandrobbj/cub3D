@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 15:50:04 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/22 15:00:06 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:00 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 void	init_config(t_setup *cfg)
 {

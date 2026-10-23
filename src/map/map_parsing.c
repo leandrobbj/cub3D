@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 15:12:58 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/22 14:53:04 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:16 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 t_error	check_map(char **lines, int start, t_setup *cfg)
 {

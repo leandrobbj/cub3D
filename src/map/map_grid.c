@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 18:35:32 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 18:24:19 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:19 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 static char	*copy_row(char *line, int width)
 {

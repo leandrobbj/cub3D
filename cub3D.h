@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cub3d.h                                            :+:      :+:    :+:   */
+/*   cub3D.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:53:13 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/22 15:41:19 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:23:08 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,6 @@ typedef enum e_error
 	ERR_READ,
 	ERR_EMPTY,
 	ERR_NO_MAP,
-//	ERR_MAP_SPACES,
 	ERR_MAP_CHAR,
 	ERR_MULTIPLE_OR_NO_PLAYER,
 	ERR_MAP_OPEN,
@@ -217,62 +216,42 @@ typedef struct s_game
 	t_player	player;
 }	t_game;
 
-/* parsing.c */
 t_error	parse_file(char *path, t_setup *cfg);
-/* file.c */
 int		check_extension(char *path, char *ext);
 char	**read_lines(int fd);
-/* map/map_parsing.c */
 t_error	check_map(char **lines, int start, t_setup *cfg);
-/* map/map.c */
 int		is_valid_map_char(char c);
 int		check_map_chars(char **lines, int start, int height);
 int		find_player(char **lines, int start, int height, t_setup *cfg);
-//int		map_has_content(char **lines, int start, int height);
-/* map/map_grid.c */
 int		build_map(char **lines, int start, int height, t_setup *cfg);
 int		map_width(char **lines, int start, int height);
 int		check_blank_lines(char **lines, int start);
-/* map/map_closed.c */
 int		check_map_closed(char **map, int width, int height);
 int		is_open_cell(char **map, int x, int y, int *size);
-/* elements/elements.c */
 t_error	parse_elements(char **lines, int *start, t_setup *cfg);
-/* elements/texture.c */
 char	**get_tex_slot(t_setup *cfg, char *id);
 t_error	parse_texture(char *rest, char **slot);
-/* elements/color.c */
 t_error	parse_color(char *line, t_setup *cfg);
-/* errors.c */
 int		print_error(t_error err);
-/* utils.c */
 void	init_config(t_setup *cfg);
 void	free_config(t_setup *cfg);
 void	free_lines(char **lines);
-
-//init
-void	start_cub3d(t_game *game);
-//handlers
+void	start_cub3D(t_game *game);
 int		key_down(int key, t_game *g);
 int		key_up(int key, t_game *g);
 int		draw_loop(t_game *g);
 int		close_window(t_game *g);
-//movement
 void	move_player(t_game *g);
-//dda
 void	init_dda(t_dda *d, t_player *p);
 void	calc_step(t_dda *d, double pos_x, double pos_y);
 void	exec_dda(t_dda *d, char **map);
 void	set_texture(t_dda *d, t_player *p);
 void	calc_line(t_dda *d);
-//draw
 void	put_pixel(t_game *g, int color, int x, int y);
 void	put_horizontal_line(t_game *g, int color, t_line *l);
 void	draw_line(t_game *g, t_dda *d, int x);
-//minimap
 void	draw_map(t_game *g, char **map, int tile);
 bool	touch_wall(char **map, double dx, double dy);
-//exit
 int		exit_game(t_game *g, char *str);
 
 #endif

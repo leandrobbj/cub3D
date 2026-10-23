@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:17:12 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/22 15:42:02 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:59 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 static int	is_empty_line(char *line)
 {

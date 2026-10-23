@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 15:51:04 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/22 14:59:44 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:14:53 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 int	main(int argc, char **argv)
 {
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	err = parse_file(argv[1], &game.setup);
 	if (err != OK)
 		return (print_error(err));
-	start_cub3d(&game);
+	start_cub3D(&game);
 	free_config(&game.setup);
 	return (0);
 }

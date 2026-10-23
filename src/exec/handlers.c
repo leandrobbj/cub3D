@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 18:10:09 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/21 20:06:42 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:15:24 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 int	key_down(int key, t_game *g)
 {
@@ -113,7 +113,7 @@ int	exit_game(t_game *g, char *str)
 		ft_putendl_fd(str, STDOUT_FILENO);
 		exit(1);
 	}
-	ft_putendl_fd("cub3d closed x", STDOUT_FILENO);
+	ft_putendl_fd("cub3D closed x", STDOUT_FILENO);
 	exit (0);
 }
 

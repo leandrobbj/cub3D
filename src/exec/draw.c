@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:50:22 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/22 14:52:31 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:31 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 void	put_pixel(t_game *g, int color, int x, int y)
 {

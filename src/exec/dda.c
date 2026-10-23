@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:50:22 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/21 17:44:22 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:29 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 void	init_dda(t_dda *d, t_player *p)
 {

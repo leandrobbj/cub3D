@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 18:35:36 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 17:52:07 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:13 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 int	is_valid_map_char(char c)
 {

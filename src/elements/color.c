@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 13:17:14 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 18:22:55 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:51 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 static int	rgb_to_int(int r, int g, int b)
 {

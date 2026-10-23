@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 14:37:37 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 17:39:18 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:10:52 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 static t_error	parse_lines(char **lines, t_setup *cfg)
 {

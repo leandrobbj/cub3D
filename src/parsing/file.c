@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 15:48:19 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/21 17:39:22 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:03 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 /* returns 0 if path ends with ext (and has something before it) */
 int	check_extension(char *path, char *ext)

@@ -6,11 +6,11 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:50:22 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/22 13:16:18 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/23 17:11:40 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "cub3D.h"
 
 bool	touch_wall(char **map, double dx, double dy)
 {
