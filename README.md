@@ -169,6 +169,7 @@ To build the program, you need `cc`, `make`, `X11`  and standard thread librarie
 	```bash
 	make
 	```
+<p align="right"> <i>*In newer complilers use make new</i>
 
 3. Launch the engine with a map:
 	```bash
