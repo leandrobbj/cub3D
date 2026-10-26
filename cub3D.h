@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 17:53:13 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/23 17:23:08 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/26 20:30:39 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -236,7 +236,7 @@ int		print_error(t_error err);
 void	init_config(t_setup *cfg);
 void	free_config(t_setup *cfg);
 void	free_lines(char **lines);
-void	start_cub3D(t_game *game);
+void	start_cub3d(t_game *game);
 int		key_down(int key, t_game *g);
 int		key_up(int key, t_game *g);
 int		draw_loop(t_game *g);

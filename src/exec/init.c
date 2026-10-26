@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/08 18:01:46 by lbraga            #+#    #+#             */
-/*   Updated: 2026/10/23 17:14:58 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/26 20:30:17 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ static int	get_tile_size(t_setup *s)
 	return (t.size);
 }
 
-void	start_cub3D(t_game *g)
+void	start_cub3d(t_game *g)
 {
 	init_mlx(g);
 	load_texture(g, &g->texture[NO], g->setup.tex_n);

@@ -6,7 +6,7 @@
 /*   By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/07 15:51:04 by vascopinto        #+#    #+#             */
-/*   Updated: 2026/10/23 17:14:53 by lbraga           ###   ########.fr       */
+/*   Updated: 2026/10/26 20:30:34 by lbraga           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	err = parse_file(argv[1], &game.setup);
 	if (err != OK)
 		return (print_error(err));
-	start_cub3D(&game);
+	start_cub3d(&game);
 	free_config(&game.setup);
 	return (0);
 }
