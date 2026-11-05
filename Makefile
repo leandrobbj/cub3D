@@ -6,7 +6,7 @@
 #    By: lbraga <lbraga@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/29 14:00:29 by lbraga            #+#    #+#              #
-#    Updated: 2026/10/23 17:09:55 by lbraga           ###   ########.fr        #
+#    Updated: 2026/11/05 16:21:40 by lbraga           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,10 +14,7 @@ NAME	=	cub3D
 HEADER	=	cub3D.h
 CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror -I.
-LDFLAGS	=
-RM		=	rm -rf
-OBJDIR	=	obj
-OBJ		=	$(SRC:src/%.c=$(OBJDIR)/%.o)
+OBJ		=	$(SRC:src/%.c=obj/%.o)
 LIBFT_D	=	src/libft
 LIBFT	=	$(LIBFT_D)/libft.a
 MLX_D	=	minilibx-linux
@@ -32,14 +29,11 @@ SRC		=	src/main.c \
 			src/exec/draw.c src/exec/minimap.c
 
 all: $(NAME)
-$(NAME): $(OBJDIR) $(OBJ) $(LIBFT) $(MLX)
+$(NAME): $(OBJ) $(LIBFT) $(MLX)
 	@$(CC) $(CFLAGS) $(LDFLAGS) $(OBJ) $(LIBFT) $(MLX_LNK) -o $(NAME) 
 	@echo "* $(NAME) compiled"
 
-$(OBJDIR):
-	@mkdir -p $(OBJDIR)
-
-$(OBJDIR)/%.o: src/%.c $(HEADER)
+obj/%.o: src/%.c $(HEADER)
 	@mkdir -p $(@D)
 	@echo "* Compiling $<"
 	@$(CC) $(CFLAGS) -c -o $@ $< 
@@ -51,17 +45,15 @@ $(MLX):
 	@$(MAKE) -s -C $(MLX_D) --no-print-directory
 
 clean:
-	@$(RM) $(OBJDIR)
+	@$(MAKE) fclean -C $(LIBFT_D) --no-print-directory
+	@$(MAKE) clean -C $(MLX_D) --no-print-directory
+	@rm -rf obj
 	@echo "* $(NAME) objects removed"
 
 fclean: clean
-	@$(RM) $(NAME)
+	@rm -f $(NAME)
 	@echo "* $(NAME) removed"
-	@$(MAKE) clean -C $(MLX_D) --no-print-directory
 
 re: fclean all
-
-new: fclean
-	@$(MAKE) LDFLAGS="-no-pie" --no-print-directory
 
 .PHONY: all clean fclean re new
